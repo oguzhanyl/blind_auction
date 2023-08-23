@@ -1,11 +1,12 @@
 from artt import logo
 import os
+# To clear the screen
 def clear_terminal():
    os.system("cls" if os.name == "nt" else "clear")
 print(logo)
 
 auction = {}
-
+# The function to find the highest bid
 def find_highest_bidder(bidding_record):
   highest_bid = 0
   winner = ""
@@ -18,6 +19,7 @@ def find_highest_bidder(bidding_record):
 
 bidding_finished = False
 
+# Auction loop
 while not bidding_finished:
   name = input("What is your name? : ")
   bid = int(input("What's your bid? : $"))
