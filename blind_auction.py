@@ -1,3 +1,8 @@
+from artt import logo
+import os
+def clear_terminal():
+   os.system("cls" if os.name == "nt" else "clear")
+print(logo)
 
 auction = {}
 
@@ -22,4 +27,4 @@ while not bidding_finished:
     bidding_finished = True
     find_highest_bidder(auction)
   elif questions == "yes":
-        pass
+        clear_terminal()
